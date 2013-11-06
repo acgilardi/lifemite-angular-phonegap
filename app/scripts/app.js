@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('lifemiteAngularPhonegapApp', [])
+var app = angular.module('lifemiteAngularPhonegapApp',[])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

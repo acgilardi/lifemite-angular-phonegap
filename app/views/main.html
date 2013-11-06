@@ -1,9 +1,15 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<div>
+    <input type="text" ng-model="nameFitler" />
+    <ul>
+        <li ng-repeat="customer in customers | filter:nameFitler | orderBy: 'name'">{{ customer.name | uppercase }}</li>
+    </ul>
+    <ul>
+        <li ng-repeat="thing in awesomeThings">{{ thing }}</li>
+    </ul>
+
+    <accordion close-others="oneAtATime">
+        <accordion-group heading="Static Header">
+            This content is straight in the template.
+        </accordion-group>
+    </accordion>
 </div>

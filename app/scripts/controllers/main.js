@@ -1,10 +1,13 @@
 'use strict';
 
-angular.module('lifemiteAngularPhonegapApp')
-  .controller('MainCtrl', function ($scope) {
+//angular.module('lifemiteAngularPhonegapApp')
+app.controller('MainCtrl', function ($scope,dataFactory) {
+    $scope.customers = dataFactory.getCustomers();
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
   });
