@@ -1,0 +1,73 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../navbar/">Default</a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li class="active"><a href="./">Fixed top</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+
+<div id="topmenu">
+    <ul class="dropdown clearfix boxed">
+        <li class="menu-level-0 first"><a href="#" hidefocus="true" style="outline: none;"><i class="icon-menu"></i><span>check in</span><sup class="note">3</sup></a></li>
+        <li class="menu-level-0"><a href="#" hidefocus="true" style="outline: none;"><i class="icon-menu icon-menu2"></i><span>events</span></a> </li>
+        <li class="menu-level-0 parent"><a href="#" hidefocus="true" style="outline: none;"><i class="icon-menu icon-menu3"></i><span>account</span></a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="widget-container widget-weather boxed clearfix">
+    <div class="air-temp"><strong>26°</strong></div>
+    <div class="water-temp"><strong>14°</strong></div>
+    <div class="wind-speed"><strong>13</strong></div>
+</div>
+
+
+<!-- Controls -->
+<div class="controls boxed line-top">
+    <div class="inner clearfix">
+        <div class="input_styled checklist pull-left"><div class="rowCheckbox"><input name="signup" type="checkbox" id="signup" value="signup"><label for="signup"></label></div></div>
+        <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-red"><input name="signup2" checked type="checkbox" id="signup2" value="signup2"><label for="signup2"></label></div></div>
+        <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-large checkbox-noText"><input name="signup5" type="checkbox" checked id="signup5" value="signup5"><label for="signup5">ON</label></div></div>
+        <div class="clear"></div>
+        <div class="input_styled inlinelist pull-left"><div class="rowRadio"><input type="radio" name="signup3" value="radio_v1" id="radio_v1"><label for="radio_v1"></label></div></div>
+        <div class="input_styled inlinelist pull-left"><div class="rowRadio radio-red"><input type="radio" name="signup3" value="radio_v2" id="radio_v2" checked><label for="radio_v2"></label></div></div>
+        <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-large checkbox-noText"><input name="signup6" type="checkbox" id="signup6" value="signup6"><label for="signup6">{{ awesomeThings[1] }}</label></div></div>
+    </div>
+</div>
+<!--/ Controls -->
+
+
