@@ -11,15 +11,15 @@
  * 
  */
 
-	function TableDef(name,databaseversion,category,keyfield)
+	function TableDef(name)
 	{
 		this.Name = name;
-		this.DatabaseVersion = databaseversion;
-		this.Category = category;
+		//this.DatabaseVersion = databaseversion;
+		//this.Category = category;
 		this.fields = {};
 		//this.InsertDefs = [];
-		this.KeyField = keyfield;
-		
+		//this.KeyField = keyfield;
+		this.KeyField = 'id';
 		this.upgrades = [];
 	};
 	
@@ -28,10 +28,16 @@
 		this.upgrades.push(upgradeDef);
 	};
 	
-	TableDef.prototype.AddField = function(fieldName,dataType,nullable,unique,key)
+	TableDef.prototype.AddField = function(fieldName, dataType, nullable, unique, key)
 	{
-		this.fields[fieldName] = {};
-		this.fields[fieldName] = { name:fieldName,datatype:dataType,nullable:nullable,unique:unique,key:key};
+		//this.fields[fieldName] = {};
+		this.fields[fieldName] = {
+            name: fieldName,
+            datatype: dataType,
+            nullable: nullable,
+            unique: unique,
+            key: key
+        };
 		
 		return this.fields[fieldName];
 	};

@@ -4,14 +4,16 @@ appmite.Upgrade0_1 = function()
 	
 	function SetPreSteps()
 	{
-		//We only fire these
-		AddStep(appmite.Tables.TableSettings().DropSql());
-		AddStep(appmite.Tables.TableProfile().DropSql());
-		AddStep(appmite.Tables.TableCategory().DropSql());
-		AddStep(appmite.Tables.TableThing().DropSql());
-		AddStep(appmite.Tables.TableResources().DropSql());
-		AddStep(appmite.Tables.TableTips().DropSql());
-	};
+		// Drop tables if they exist
+        AddStep(appmite.Tables.TableCategory().DropSql());
+		AddStep(appmite.Tables.TableGoal().DropSql());
+		AddStep(appmite.Tables.TableGoalProperty().DropSql());
+		AddStep(appmite.Tables.TablePreference().DropSql());
+		AddStep(appmite.Tables.TableSchedule().DropSql());
+		AddStep(appmite.Tables.TableScheduleProperty().DropSql());
+		AddStep(appmite.Tables.TableTemplate().DropSql());
+        AddStep(appmite.Tables.TableTemplateProperty().DropSql());
+	}
 	
 	function SetCreateSteps()
 	{
@@ -61,11 +63,6 @@ appmite.Upgrade0_1 = function()
 		appmite.Tables.TableThing().AddField("IsServing",appmite.SqlLite.DataTypes().Integer,false,false,false);
 		appmite.Tables.TableThing().AddField("IsScheduled",appmite.SqlLite.DataTypes().Integer,false,false,false);
 		appmite.Tables.TableThing().AddField("IsGoalTracked",appmite.SqlLite.DataTypes().Integer,false,false,false);
-	
-		//AddStep(appmite.Tables.TableSettings().DropSql);
-		//AddStep(appmite.Tables.TableProfile().DropSql);
-		//AddStep(appmite.Tables.TableCategory().DropSql);
-		//AddStep(appmite.Tables.TableThing().DropSql);
 
 		AddStep(appmite.Tables.TableSettings().CreateSql());
 		AddStep(appmite.Tables.TableProfile().CreateSql());

@@ -49,19 +49,22 @@ appmite.Global = function()
 			
 			//appmite.Global.SetDbInitialized(doneCallback);
 			
-			appmite.Tables.DefineTables();	
+			appmite.Tables.DefineTables([
+                "category",
+                "goals"
+            ]);
 			appmite.SqlLite.AddTables(appmite.Tables.Tables());
-			appmite.SqlLite.AddUpgrades(appmite.Tables.Upgrades());
-			appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
-			appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,
-                function() {
-                    //alert('done: bootstrap angular');
-                    bootstrapAngular();
-                },
-                appmite.Global.ErrorHandler,
-                function(message) {
-                    //alert(message);
-                });
+			//appmite.SqlLite.AddUpgrades(appmite.Tables.Upgrades());
+			//appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
+//			appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,
+//                function() {
+//                    //alert('done: bootstrap angular');
+//                    bootstrapAngular();
+//                },
+//                appmite.Global.ErrorHandler,
+//                function(message) {
+//                    //alert(message);
+//                });
 		}
 	};
 }();
