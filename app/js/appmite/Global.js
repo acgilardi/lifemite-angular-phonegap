@@ -9,13 +9,17 @@ appmite.Global = function()
 	var DatabaseDescription = "";
 	var DbInitCallback = {};
 	var ActiveProfile = "";
-    //ng-app="lifemiteAngularPhonegapApp"
+
+
+    var locale = undefined;
+
+
 
     var bootstrapAngular = function() {
         angular.element(document).ready(function() {
             angular.bootstrap(document, ['lifemiteAngularPhonegapApp']);
         });
-    }
+    };
 
 	
 	return{
@@ -42,18 +46,29 @@ appmite.Global = function()
 			if(error != undefined)
 				appmite.Global.Alert(error.message);
 		},
-		
+
+        Loc: function() { return locale; },
+
 		InitDatabase: function()
 		{
+            var lang = navigator.language.toLowerCase();
+
+            locale = new I18n({
+                //these are the default values, you can omit
+                directory: "locales",
+                locale: lang,
+                extension: ".json"
+            });
+
 			//progressCallback("InitDatabase - Start");
 			
 			//appmite.Global.SetDbInitialized(doneCallback);
 			
-			appmite.Tables.DefineTables([
-                "category",
-                "goals"
-            ]);
-			appmite.SqlLite.AddTables(appmite.Tables.Tables());
+			//appmite.Tables.DefineTables([
+            //    "category",
+            //    "goals"
+            //]);
+			//appmite.SqlLite.AddTables(appmite.Tables.Tables());
 			//appmite.SqlLite.AddUpgrades(appmite.Tables.Upgrades());
 			//appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
 //			appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,

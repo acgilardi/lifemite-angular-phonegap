@@ -20,27 +20,39 @@
 		//this.InsertDefs = [];
 		//this.KeyField = keyfield;
 		this.KeyField = 'id';
-		this.upgrades = [];
-	};
-	
-	TableDef.prototype.AddUpgrade = function(upgradeDef)
-	{
-		this.upgrades.push(upgradeDef);
-	};
-	
-	TableDef.prototype.AddField = function(fieldName, dataType, nullable, unique, key)
-	{
-		//this.fields[fieldName] = {};
-		this.fields[fieldName] = {
-            name: fieldName,
-            datatype: dataType,
-            nullable: nullable,
-            unique: unique,
-            key: key
+		//this.upgrades = [];
+
+        this.AddField = function(fieldName, dataType)
+        {
+            //this.fields[fieldName] = {};
+            this.fields[fieldName] = {
+                name: fieldName,
+                datatype: dataType.type,
+                nullable: !dataType.required,
+                unique: dataType.unique,
+                key: dataType.key,
+                fkey: dataType.fkey
+            };
+
+            return this.fields[fieldName];
         };
-		
-		return this.fields[fieldName];
-	};
+
+
+        this.DropSql = function()
+        {
+            var sql = "DROP TABLE IF EXISTS [" + this.Name + "];";
+            return sql;
+        };
+
+
+	}
+
+//TableDef.prototype.AddUpgrade = function(upgradeDef)
+//{
+//    this.upgrades.push(upgradeDef);
+//};
+	
+
 	
 	TableDef.prototype.AddFieldSql = function(fieldName,dataType,nullable,unique,key)
 	{
@@ -83,11 +95,7 @@
 		return sql;	
 	};
 	
-	TableDef.prototype.DropSql = function()
-	{
-		var sql = "DROP TABLE IF EXISTS [" + this.Name + "];";	
-		return sql;	
-	};
+
 	
 	TableDef.prototype.CreateSql = function()
 	{
@@ -103,7 +111,7 @@
 			else
 				sqlFields +=  this.fields[field].datatype + " "
 				
-			if( this.fields[field].nullable)
+			if(!this.fields[field].nullable)
 				sqlFields += "NOT NULL ";
 				
 			if( this.fields[field].unique)

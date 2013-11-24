@@ -10,12 +10,21 @@ appmite.Tables = function()
         });
     };
 
+    dropAllSql = function() {
+        var sqlSteps = [];
+        _.each(appmite.Tables(), function(table) {
+            sqlSteps.push(appmite.Table(table.Name).DropSql());
+        });
+
+        return sqlSteps;
+    };
+
 
 	//var upgrades = [];
-//		upgrades.push(appmite.Upgrade0_1.UpgradeDef());
-//	}
+	//upgrades.push(appmite.Upgrade0_1.UpgradeDef());
 
 	return {
+        DropAllSql: function() { return dropAllTables; },
         Table: function(name) { return tables[name]; },
 		Tables: function() { return tables},
 		Upgrades: function() { return upgrades; },

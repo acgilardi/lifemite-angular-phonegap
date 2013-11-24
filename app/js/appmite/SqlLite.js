@@ -13,9 +13,6 @@
 appmite.SqlLite = function() 
 {	
     // define private data and functions
-    var keynamefield = "keyname";
-	var keyentityfield = "keyentity";
-    var dataTypes = {"Text" : "TEXT", "Integer" : "INTEGER", "Date" : "TEXT", "Float" : "FLOAT", "Boolean" : "INTEGER"};
     var database = {};
     var forceRebuild = false;
     var sqlSteps = [];
@@ -24,6 +21,29 @@ appmite.SqlLite = function()
     var upgrades = [];
     var entitySets = {};
     var entitiesLeftToFill = 0;
+
+
+    var dataTypes = {
+        "TEXT": {type:"TEXT"},
+        "TEXT_REQ": {type:"TEXT", required: true},
+        "TEXT_UNIQUE": {type:"TEXT", required: true, unique: true},
+        "INTEGER": {type:"INTEGER"},
+        "INTEGER_REQ": {type:"INTEGER", required: true},
+        "DATE":  {type:"DATE"},
+        "DATE_REQ": {type: "DATE", required: true},
+        "DATETIME" : {type:"DATETIME", required: false, unique: false, key: false},
+        "DATETIME_REQ" : {type:"DATETIME", required: true},
+        "FLOAT" : {type:"FLOAT"},
+        "BOOL" : {type:"BOOL"},
+        "P_KEY": {type:"BOOL", required: true, key: true},
+        "F_KEY": {type:"BOOL", required: true, fkey: true}
+    };
+
+    var keynamefield = "keyname";
+    var keyentityfield = "keyentity";
+
+   // fieldName, dataType, nullable, unique, key
+
     
     var successCallback = function(){};
     var errorCallback = function(){};
@@ -127,7 +147,40 @@ appmite.SqlLite = function()
 				}
 			}
 		}
-	};
+	}
+
+    function dropAllTablesSql(tableNames) {
+        var sqlSteps = [];
+        _.each(tableNames, function(tableName) {
+            sqlSteps.push("DROP TABLE IF EXISTS [" + tableName + "];");
+        }, sqlSteps);
+
+        return sqlSteps;
+    }
+
+    function createTables(newTables) {
+        sqlSteps = [];
+
+        _.each(newTables, function(fields, tableName) {
+            var tableDef = new TableDef(tableName);
+            _.each(fields, function(fieldType, fieldName) {
+                //ACG: Get the field type null etc
+                tableDef.AddField(fieldName, fieldType, true, false,false);
+            }, tableDef);
+
+            tables[tableName] =  tableDef;
+        }, tables);
+
+        _.each(tables, function(table) {
+            sqlSteps.push(table.CreateSql());
+        }, sqlSteps)
+
+        return sqlSteps;
+    }
+
+    function addUpgrade(upgradeDef) {
+        this.upgrades.push(upgradeDef);
+    }
 	
     // return public pointers to functions or properties
     // that are to be public
@@ -136,20 +189,24 @@ appmite.SqlLite = function()
 
     	db: function() { return database; },
 
-		AddTables: function(tablesArray)
-		{
-			for (i = 0; i < tablesArray.length; i++) 
-			{
-				var tableDef = tablesArray[i];
-				tables[tableDef.Name] = { name:tableDef.Name, tabledef:tablesArray[i] };
-			}
-		},
+        Table: function(name) { return tables[name]; },
+
+        Tables: function() { return tables},
+
+        DropAllTablesSql: function(tableNames) { return dropAllTablesSql(tableNames); },
+
+        CreateTables: function(tables) { return createTables(tables); },
 	     
 	    AddUpgrades: function(upgradesArray)
 	    {
 	    	for (i = 0; i < upgradesArray.length; i++) 
 				upgrades.push(upgradesArray[i]);
 	    } ,
+
+        AddUpgrade: function(upgrade) {
+
+        },
+
        	ForceRebuild: function(enable){
 			forceRebuild = enable;
 		},
@@ -263,7 +320,7 @@ appmite.SqlLite = function()
 				enttoarray.push(entities[entity]);
 			
 			return enttoarray;
-		},
+		}
     }
 }(); //end closure definition and invoke it
 
