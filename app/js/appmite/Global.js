@@ -51,8 +51,8 @@ appmite.Global = function()
 
 		InitDatabase: function()
 		{
+            // Set the locale from browser
             var lang = navigator.language.toLowerCase();
-
             locale = new I18n({
                 //these are the default values, you can omit
                 directory: "locales",
@@ -60,29 +60,24 @@ appmite.Global = function()
                 extension: ".json"
             });
 
-			//progressCallback("InitDatabase - Start");
-			
-			//appmite.Global.SetDbInitialized(doneCallback);
-			
-			//appmite.Tables.DefineTables([
-            //    "category",
-            //    "goals"
-            //]);
-			//appmite.SqlLite.AddTables(appmite.Tables.Tables());
-			//appmite.SqlLite.AddUpgrades(appmite.Tables.Upgrades());
-			//appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
-//			appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,
-//                function() {
-//                    //alert('done: bootstrap angular');
-//                    bootstrapAngular();
-//                },
-//                appmite.Global.ErrorHandler,
-//                function(message) {
-//                    //alert(message);
-//                });
+            // Build or init database
+            appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
+            appmite.SqlLite.AddUpgrade(appmite.Upgrade0_1.UpgradeDef());
+            appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,
+                function() {
+                    //alert('done: bootstrap angular');
+
+                },
+                appmite.Global.ErrorHandler,
+                function(message) {
+                    alert(message);
+                });
+
+            bootstrapAngular();
 		}
 	};
 }();
 
 appmite.Global.InitDatabase();
+
 

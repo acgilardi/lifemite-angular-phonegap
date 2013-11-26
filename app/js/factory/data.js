@@ -10,6 +10,8 @@ app.factory('dataFactory', function($q, $rootScope) {
 
     return {
         getCustomers: function() {
+
+
             var deferred = $q.defer();
 
             var commands = [];

@@ -1,0 +1,12 @@
+{
+    "name":"lifeMite",
+	"description":"lifeMite Application - Balance your life",
+	"launch_path":"/index.html", 
+    	"icons":{
+        	"128":"/icon.png"
+    	},
+	"developer": {
+        	"name":"lifeMite"
+	},
+	"default_locale":"en"
+}

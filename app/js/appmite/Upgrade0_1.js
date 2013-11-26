@@ -555,4 +555,3 @@ appmite.Upgrade0_1 = function()
 	}
 }();
 
-appmite.SqlLite.AddUpgrade(appmite.Upgrade0_1.UpgradeDef());
