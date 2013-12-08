@@ -6,7 +6,6 @@ app.controller('MainCtrl', function ($scope, dataFactory, $location) {
 
     $scope.customers = dataFactory.getCustomers();
 
-
     $scope.$on('$viewContentLoaded', function(){
         general();
     });

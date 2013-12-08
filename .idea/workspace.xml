@@ -2,40 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc44f93-7f94-4aff-a689-57d19a712ee9" name="Default" comment="locale: Add i18n locale&#10;&#10;Add local use while creating initial database. Allow database inserts from locale&#10;specific json files">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/appmite/Upgrade3_4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/angular.js" />
+      <change type="DELETED" beforePath="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js\appmite\Tables.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/Global.js" afterPath="$PROJECT_DIR$/app/js/appmite/Global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/SqlLite.js" afterPath="$PROJECT_DIR$/app/js/appmite/SqlLite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/TableDef.js" afterPath="$PROJECT_DIR$/app/js/appmite/TableDef.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/Upgrade0_1.js" afterPath="$PROJECT_DIR$/app/js/appmite/Upgrade0_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/Upgrade1_2.js" afterPath="$PROJECT_DIR$/app/js/appmite/Upgrade1_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/appmite/Upgrade2_3.js" afterPath="$PROJECT_DIR$/app/js/appmite/Upgrade2_3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/factory/data.js" afterPath="$PROJECT_DIR$/app/js/factory/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/locales/en-us.json" afterPath="$PROJECT_DIR$/app/locales/en-us.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.html" afterPath="$PROJECT_DIR$/app/partials/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/main.js" afterPath="$PROJECT_DIR$/app/js/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/manifest.webapp" afterPath="$PROJECT_DIR$/app/manifest.webapp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lifemite-angular-phonegap.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385342378493" ignored="false" />
-    <file path="/main.html" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385402107109" ignored="false" />
+    <file path="/Dummy.txt" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1386502315559" ignored="false" />
+    <file path="/main.html" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385815275423" ignored="false" />
     <file path="/app.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384625150638" ignored="false" />
     <file path="/factory.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1383503193953" ignored="false" />
     <file path="/data.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384735021692" ignored="false" />
     <file path="/main.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384734851353" ignored="false" />
-    <file path="/index.html" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385342867240" ignored="false" />
-    <file path="/a.dummy" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385342931868" ignored="false" />
+    <file path="/index.html" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385818182729" ignored="false" />
+    <file path="/a.dummy" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385548432993" ignored="false" />
     <file path="/style.css" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384000905532" ignored="false" />
     <file path="/main.css" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385377947812" ignored="false" />
     <file path="/general.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384025379504" ignored="false" />
     <file path="/bower.json" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384025904639" ignored="false" />
     <file path="/main2.html" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384625416349" ignored="false" />
-    <file path="/Global.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385377639056" ignored="false" />
-    <file path="/TableDef.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385079572982" ignored="false" />
+    <file path="/Global.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385938711459" ignored="false" />
+    <file path="/TableDef.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385938105148" ignored="false" />
     <file path="/Tables.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1384946183926" ignored="false" />
     <file path="/Upgrade0_1.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385335854875" ignored="false" />
     <file path="/UpgradeDef.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385056796302" ignored="false" />
-    <file path="/SqlLite.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385141595537" ignored="false" />
+    <file path="/SqlLite.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1386266277757" ignored="false" />
     <file path="/en-US.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385205821356" ignored="false" />
-    <file path="/i18n.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385231471578" ignored="false" />
+    <file path="/i18n.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385464722071" ignored="false" />
     <file path="/en.json" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385331339442" ignored="false" />
+    <file path="/angular.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385603415810" ignored="false" />
+    <file path="/Upgrade3_4.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385818540193" ignored="false" />
+    <file path="/Upgrade1_2.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385818002433" ignored="false" />
+    <file path="/Upgrade2_3.js" changelist="0fc44f93-7f94-4aff-a689-57d19a712ee9" time="1385818021518" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +61,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -86,7 +98,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -96,19 +107,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/partials/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="12" column="55" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en-us.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/locales/en-us.json">
+      <file leaf-file-name="data.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/factory/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="23" selection-start="0" selection-end="2504" vertical-scroll-proportion="-0.0">
+            <state line="26" column="16" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlLite.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/appmite/SqlLite.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="235" column="61" selection-start="6022" selection-end="6022" vertical-scroll-proportion="0.02366864">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTML5.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1402" column="86" selection-start="24954" selection-end="24970" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,28 +161,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/js/appmite/TableDef.js" />
-        <option value="$PROJECT_DIR$/app/js/appmite/data.json" />
-        <option value="$PROJECT_DIR$/app/js/appmite/en-US.js" />
-        <option value="$PROJECT_DIR$/app/js/appmite/data/en-US.js" />
-        <option value="$PROJECT_DIR$/app/js/locales/en.json" />
-        <option value="$PROJECT_DIR$/app/js/locales/de.json" />
+        <option value="$PROJECT_DIR$/app/manifest.webapp" />
+        <option value="$PROJECT_DIR$/app/locales/en-us.json" />
         <option value="$PROJECT_DIR$/app/bower_components/browser-i18n/i18n.js" />
-        <option value="$PROJECT_DIR$/app/locales/en.json" />
-        <option value="$PROJECT_DIR$/app/locales/de.json" />
-        <option value="$PROJECT_DIR$/app/js/appmite/SqlLite.js" />
-        <option value="$PROJECT_DIR$/app/js/factory/data.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/bower_components/angular/angular.js" />
         <option value="$PROJECT_DIR$/app/js/appmite/Upgrade0_1.js" />
-        <option value="$PROJECT_DIR$/app/js/appmite/Global.js" />
-        <option value="$PROJECT_DIR$/app/css/main.css" />
-        <option value="$PROJECT_DIR$/app/partials/main.html" />
+        <option value="$PROJECT_DIR$/app/js/appmite/Upgrade1_2.js" />
+        <option value="$PROJECT_DIR$/app/js/appmite/Upgrade2_3.js" />
+        <option value="$PROJECT_DIR$/app/js/appmite/Tables.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/js/appmite/TableDef.js" />
+        <option value="$PROJECT_DIR$/app/js/appmite/Upgrade3_4.js" />
+        <option value="$PROJECT_DIR$/app/js/appmite/Global.js" />
+        <option value="$PROJECT_DIR$/app/partials/main.html" />
+        <option value="$PROJECT_DIR$/app/js/factory/data.js" />
+        <option value="$PROJECT_DIR$/app/js/appmite/SqlLite.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1165" />
-    <option name="height" value="860" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -201,6 +230,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifemite-angular-phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifemite-angular-phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifemite-angular-phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lifemite-angular-phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appmite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -218,22 +307,23 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js\appmite" />
+      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\bower_components\angular" />
+      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app" />
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js\locales" />
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js\appmite-data" />
-      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js" />
-      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\partials" />
-      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app" />
+      <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\bower_components" />
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js\appmite\data" />
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\js" />
       <recent name="C:\Users\Anthony\Dev\lifemite-angular-phonegap\app\styles" />
@@ -276,13 +366,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -302,6 +385,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -371,12 +461,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1165" height="860" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31527779" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -390,10 +479,11 @@
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16216215" sideWeight="0.47008547" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17860381" sideWeight="0.68472224" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2806236" sideWeight="0.75" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25920472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286908" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -459,14 +549,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/js/controllers/main.js</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -474,120 +557,92 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../persistencejs/lib/persistence.store.sqlite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="56" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/browser-i18n/i18n.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="62" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/appmite/TableDef.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="38" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#897#999#0" expanded="false" />
-            <element signature="e#1198#1623#0" expanded="false" />
-            <element signature="e#1682#1719#0" expanded="false" />
-            <element signature="e#1767#1938#0" expanded="false" />
-            <element signature="e#1990#2072#0" expanded="false" />
-            <element signature="e#2123#2692#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/locales/de.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="1" selection-start="2503" selection-end="2503" vertical-scroll-proportion="1.6216216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/appmite/UpgradeDef.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="379" selection-end="379" vertical-scroll-proportion="0.3468208">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="27" selection-end="27" vertical-scroll-proportion="0.030627871">
-          <folding />
-        </state>
+        <state line="47" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="0.4159292" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="52" selection-start="43" selection-end="69" vertical-scroll-proportion="0.11527377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/factory/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="52" selection-start="43" selection-end="69" vertical-scroll-proportion="0.1179941" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/appmite/Upgrade0_1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="556" column="0" selection-start="19624" selection-end="19624" vertical-scroll-proportion="1.3203661">
-          <folding>
-            <element signature="e#454#629#0" expanded="false" />
-            <element signature="e#655#1138#0" expanded="false" />
-            <element signature="e#1671#1767#0" expanded="false" />
-            <element signature="e#1797#2348#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="3" column="16" selection-start="0" selection-end="256" vertical-scroll-proportion="0.06993007" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/appmite/SqlLite.js">
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/Upgrade2_3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="8" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="36" selection-start="70" selection-end="70" vertical-scroll-proportion="0.046620045" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/main.css">
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/Upgrade1_2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="29" selection-end="33" vertical-scroll-proportion="0.030627871">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="271" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/appmite/Global.js">
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/UpgradeDef.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="38" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.834375">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.html">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="145" selection-start="92" selection-end="92" vertical-scroll-proportion="0.031298906">
+        <state line="40" column="0" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.5793269">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/locales/en-us.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="0" selection-end="2504" vertical-scroll-proportion="-0.0">
+        <state line="18" column="8" selection-start="698" selection-end="713" vertical-scroll-proportion="-13.846154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.46620047" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/Global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="47" selection-start="2457" selection-end="2457" vertical-scroll-proportion="0.65268064" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/Upgrade3_4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="28" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.11771562" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/TableDef.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="123" selection-start="3025" selection-end="3025" vertical-scroll-proportion="0.46386945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="55" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/js/factory/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="26" column="16" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1402" column="86" selection-start="24954" selection-end="24970" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/appmite/SqlLite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="61" selection-start="6022" selection-end="6022" vertical-scroll-proportion="0.02366864">
           <folding />
         </state>
       </provider>

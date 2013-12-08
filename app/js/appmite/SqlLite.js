@@ -70,14 +70,9 @@ appmite.SqlLite = function()
     
     function createDatabase(tx)
     {
-		//progressCallback("Create Database - Start");
-		//appmite.Global.Alert("Create Database - Start");
-			
-		//Steps
+		// We have a complete set of steps to create and/or upgrade the database
     	for (i = 0; i < sqlSteps.length; i++)
     		tx.executeSql(sqlSteps[i]);
-
-    	//progressCallback("Create Database - End");
     };
  
  	function genericRequest(sql,callbackSuccess,callbackError)
@@ -150,16 +145,16 @@ appmite.SqlLite = function()
 	}
 
     function dropAllTablesSql(tableNames) {
-        var sqlSteps = [];
+        var steps = [];
         _.each(tableNames, function(tableName) {
-            sqlSteps.push("DROP TABLE IF EXISTS [" + tableName + "];");
-        }, sqlSteps);
+            steps.push("DROP TABLE IF EXISTS [" + tableName + "];");
+        }, steps);
 
-        return sqlSteps;
+        return steps;
     }
 
     function createTables(newTables) {
-        sqlSteps = [];
+        steps = [];
 
         _.each(newTables, function(fields, tableName) {
             var tableDef = new TableDef(tableName);
@@ -172,16 +167,31 @@ appmite.SqlLite = function()
         }, tables);
 
         _.each(tables, function(table) {
-            sqlSteps.push(table.CreateSql());
-        }, sqlSteps)
+            steps.push(table.CreateSql());
+        }, steps);
 
-        return sqlSteps;
+        return steps;
     }
 
     function addUpgrade(upgradeDef) {
         this.upgrades.push(upgradeDef);
     }
-	
+
+
+    function getInsertSql(inserts) {
+        steps = [];
+
+        _.each(inserts, function(insertArray, tableName) {
+            var table = tables[tableName];
+
+            _.each(insertArray, function(insertItem, element) {
+                steps.push(table.InsertSql(insertItem));
+            }, table);
+        }, tables);
+
+        return steps;
+    }
+
     // return public pointers to functions or properties
     // that are to be public
     return {
@@ -196,6 +206,8 @@ appmite.SqlLite = function()
         DropAllTablesSql: function(tableNames) { return dropAllTablesSql(tableNames); },
 
         CreateTables: function(tables) { return createTables(tables); },
+
+        GetInsertSql: function(inserts) { return getInsertSql(inserts); },
 	     
 	    AddUpgrades: function(upgradesArray)
 	    {
@@ -204,7 +216,7 @@ appmite.SqlLite = function()
 	    } ,
 
         AddUpgrade: function(upgrade) {
-
+            upgrades.push(upgrade);
         },
 
        	ForceRebuild: function(enable){
@@ -221,7 +233,7 @@ appmite.SqlLite = function()
 
 			try 
 			{
-				database = window.openDatabase(databaseName,"",databaseDescription,200000);
+				database = window.openDatabase(databaseName,1,databaseDescription,200000);
 				
 				var neededVersionString = databaseVersion + ".0";
 				var currentVersion = database.version * 1;

@@ -8,6 +8,18 @@
 
 app.factory('dataFactory', function($q, $rootScope) {
 
+
+//        var factory = {};
+//
+//    var customers = [{name:'MARGERINE',city:'Bion'},{name:'Joe',city:'Two'},{name:'Mary',city:'One'}];
+//
+//    factory.getCustomers = function() {
+//
+//        return customers;
+//    };
+//
+//    return factory;
+
     return {
         getCustomers: function() {
 
@@ -15,7 +27,7 @@ app.factory('dataFactory', function($q, $rootScope) {
             var deferred = $q.defer();
 
             var commands = [];
-            commands.push("Select *,REPLACE(GroupName,' ','_') as keyname,'CategoryEntities' as keyentity From [Group];");
+            commands.push("Select *,id as keyname,'CategoryEntities' as keyentity From [category];");
 
             appmite.SqlLite.Fetch(commands,
                 function(entitySets) {
@@ -33,14 +45,3 @@ app.factory('dataFactory', function($q, $rootScope) {
         }
     }
 });
-
-//    var factory = {};
-//
-//    var customers = [{name:'MARGERINE',city:'Bion'},{name:'Joe',city:'Two'},{name:'Mary',city:'One'}];
-//
-//    factory.getCustomers = function() {
-//
-//        return customers;
-//    }
-//
-//    return factory;

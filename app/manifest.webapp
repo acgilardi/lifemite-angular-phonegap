@@ -8,5 +8,9 @@
 	"developer": {
         	"name":"lifeMite"
 	},
-	"default_locale":"en"
+	"default_locale":"en",
+	"type": "privileged",
+    "permissions": {
+    "systemXHR": { "description": "Required to make Ajax Calls over the Network" }
+    }
 }

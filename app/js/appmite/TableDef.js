@@ -14,8 +14,6 @@
 	function TableDef(name)
 	{
 		this.Name = name;
-		//this.DatabaseVersion = databaseversion;
-		//this.Category = category;
 		this.fields = {};
 		//this.InsertDefs = [];
 		//this.KeyField = keyfield;
@@ -133,17 +131,19 @@
 		var sqlValues = "";
 		
 		for(var value in values)
-		{			
+		{
+            console.log("Insert: " + this.Name + ", " + value + ", " + this.fields[value] + "," + this.fields[value].name);
+
 			sqlFields +=  this.fields[value].name + ","
 			
 			switch(this.fields[value].datatype)
 			{			
-				case appmite.SqlLite.DataTypes().Float:
-				case appmite.SqlLite.DataTypes().Integer:
+				case appmite.SqlLite.DataTypes().INTEGER:
+				case appmite.SqlLite.DataTypes().INTEGER_REQ:
 					sqlValues += values[value].toString() + ",";
 					break;
 					
-				case appmite.SqlLite.DataTypes().Boolean:
+				case appmite.SqlLite.DataTypes().BOOL:
 					if(values[value])
 						sqlValues += "1,";
 					else
@@ -178,12 +178,12 @@
 			
 			switch(this.fields[value].datatype)
 			{			
-				case appmite.SqlLite.DataTypes().Float:
-				case appmite.SqlLite.DataTypes().Integer:
+				case appmite.SqlLite.DataTypes().INTEGER:
+                case appmite.SqlLite.DataTypes().INTEGER_REQ:
 					sqlValues += this.fields[value].name + "=" + values[value].toString() + ",";
 					break;
 					
-				case appmite.SqlLite.DataTypes().Boolean:
+				case appmite.SqlLite.DataTypes().BOOL:
 					if(values[value])
 						sqlValues += this.fields[value].name + "=1,";
 					else
@@ -200,12 +200,12 @@
 		{
 			switch(this.fields[clause].datatype)
 			{			
-				case appmite.SqlLite.DataTypes().Float:
-				case appmite.SqlLite.DataTypes().Integer:
+				case appmite.SqlLite.DataTypes().INTEGER:
+				case appmite.SqlLite.DataTypes().INTEGER_REQ:
 					sqlAndClauses += this.fields[clause].name + "=" + andClauses[clause].toString() + " AND ";
 					break;
 					
-				case appmite.SqlLite.DataTypes().Boolean:
+				case appmite.SqlLite.DataTypes().BOOL:
 					if(andClauses[clause])
 						sqlAndClauses += this.fields[clause].name + "=1 AND ";
 					else
@@ -235,12 +235,12 @@
 		{
 			switch(this.fields[clause].datatype)
 			{			
-				case appmite.SqlLite.DataTypes().Float:
-				case appmite.SqlLite.DataTypes().Integer:
+				case appmite.SqlLite.DataTypes().INTEGER:
+				case appmite.SqlLite.DataTypes().INTEGER_REQ:
 					sqlAndClauses += this.fields[clause].name + "=" + andClauses[clause].toString() + " AND ";
 					break;
 					
-				case appmite.SqlLite.DataTypes().Boolean:
+				case appmite.SqlLite.DataTypes().BOOL:
 					if(andClauses[clause])
 						sqlAndClauses += this.fields[clause].name + "=1 AND ";
 					else

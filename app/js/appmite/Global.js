@@ -4,7 +4,7 @@ appmite.Global = function()
 {
 	//Database version
 	var DatabaseForceRebuild  = true;
-	var DatabaseVersion = 3;
+	var DatabaseVersion = 4;
 	var DatabaseName = "lifeMiteDB";
 	var DatabaseDescription = "";
 	var DbInitCallback = {};
@@ -53,6 +53,9 @@ appmite.Global = function()
 		{
             // Set the locale from browser
             var lang = navigator.language.toLowerCase();
+
+
+
             locale = new I18n({
                 //these are the default values, you can omit
                 directory: "locales",
@@ -63,17 +66,25 @@ appmite.Global = function()
             // Build or init database
             appmite.SqlLite.ForceRebuild(DatabaseForceRebuild);
             appmite.SqlLite.AddUpgrade(appmite.Upgrade0_1.UpgradeDef());
+            appmite.SqlLite.AddUpgrade(appmite.Upgrade1_2.UpgradeDef());
+            appmite.SqlLite.AddUpgrade(appmite.Upgrade2_3.UpgradeDef());
+            appmite.SqlLite.AddUpgrade(appmite.Upgrade3_4.UpgradeDef());
             appmite.SqlLite.InitDatabase(DatabaseName,DatabaseVersion,DatabaseDescription,
                 function() {
-                    //alert('done: bootstrap angular');
-
+                    console.log("Global.InitDatabase: Success Initializing SqlLite Database");
+                    //bootstrapAngular();
                 },
-                appmite.Global.ErrorHandler,
+                function(a,b,c) {
+                    alert('Global.InitDatabase: Error fetching data');
+                    console.log(a);
+                    console.log(b);
+                    console.log(c);
+                },
                 function(message) {
-                    alert(message);
+                    console.log(message);
                 });
 
-            bootstrapAngular();
+           bootstrapAngular();
 		}
 	};
 }();
