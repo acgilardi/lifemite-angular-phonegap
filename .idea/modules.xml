@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../_iji_projects/browserdb/browserdb.iml" filepath="$PROJECT_DIR$/../_iji_projects/browserdb/browserdb.iml" />
       <module fileurl="file://$PROJECT_DIR$/../_iji_projects/lifeMite-Android/lifeMite.iml" filepath="$PROJECT_DIR$/../_iji_projects/lifeMite-Android/lifeMite.iml" />
       <module fileurl="file://$PROJECT_DIR$/../lifeMite/Source/lifemite-orig.iml" filepath="$PROJECT_DIR$/../lifeMite/Source/lifemite-orig.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../_iji_projects/persistancejs/persistancejs.iml" filepath="$PROJECT_DIR$/../_iji_projects/persistancejs/persistancejs.iml" />
     </modules>
   </component>
 </project>

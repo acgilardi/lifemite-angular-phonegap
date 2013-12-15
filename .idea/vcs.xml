@@ -2,9 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../browserdb" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../lifeMite-Android" vcs="hg4idea" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../persistencejs" vcs="Git" />
   </component>
 </project>
 

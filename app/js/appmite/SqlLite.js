@@ -15,10 +15,11 @@ appmite.SqlLite = function()
     // define private data and functions
     var database = {};
     var forceRebuild = false;
-    var sqlSteps = [];
-    var sqlTestScript = "";
-    var tables = {};
-    var upgrades = [];
+    var collections = [];
+    var inserts = {};
+
+
+
     var entitySets = {};
     var entitiesLeftToFill = 0;
 
@@ -195,6 +196,40 @@ appmite.SqlLite = function()
     // return public pointers to functions or properties
     // that are to be public
     return {
+        RemoveAllCollections: function(){
+            collections = [];
+            inserts = {};
+        },
+
+        AddCollections: function(newCollections){
+            _.each(newCollections, function(newCollection) {
+
+                var found = _.find(collections, function(item){
+                    return item == newCollection;
+                }, newCollection);
+
+                if(!found) {
+                    collections.push(newCollection);
+                }
+
+            }, collections);
+
+            // Make sure we have an insert entry for each collection
+            _.each(collections, function(collection){
+                if(inserts[collection] == undefined) {
+                    inserts[collection] = [];
+                }
+            }, inserts)
+        },
+
+        AddInserts: function(newInserts){
+            _.each(newInserts, function(insertObjects, collection) {
+                _.each(insertObjects, function(insertObject) {
+                    inserts[collection].push(insertObject);
+                }, collection)
+            })
+        },
+
     	DataTypes: function() { return dataTypes; },
 
     	db: function() { return database; },
@@ -223,7 +258,7 @@ appmite.SqlLite = function()
 			forceRebuild = enable;
 		},
         
-        InitDatabase: function(databaseName,databaseVersion,databaseDescription,callbackSuccess,callbackError,callbackProgress)
+        InitDatabase: function(databaseName,databaseVersion,callbackSuccess,callbackError,callbackProgress)
         {
 			successCallback = callbackSuccess;
 			errorCallback = callbackError;
@@ -233,24 +268,18 @@ appmite.SqlLite = function()
 
 			try 
 			{
-				database = window.openDatabase(databaseName,1,databaseDescription,200000);
-				
-				var neededVersionString = databaseVersion + ".0";
-				var currentVersion = database.version * 1;
-				var currentVersionString = currentVersion + ".0";
-				if(currentVersion == 0)
-					currentVersionString = "";
+                indexedDB.deleteDatabase(databaseName);
 
-				if(forceRebuild)
-				{
-					currentVersion = 0;
-					//currentVersionString = "";
-				}
-				
-				SetupScripts(currentVersion,databaseVersion);
-
-				database.changeVersion(currentVersionString,neededVersionString, createDatabase, errorCallback, successCallback);
-			}
+                // create the database using browserdb
+                new BrowserDb({
+                    db: databaseName,
+                    collections:['one','two']
+                }, function(error, broswerDb) {
+                    if(!error){
+                        console.log("success");
+                    }
+                });
+            }
 			catch (e)
 			{
 				return false;
